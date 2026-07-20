@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/embodyme/digiself-realtime-api-sample
+docs: https://github.com/embodyme/digiself-realtime-api-sample/tree/main/quick-start-meeting-bot
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+- name: DigiselfApiKey
+  type: apiKey
+  in: header
+  parameter: x-api-key
+  description: >-
+    All DigiSelf Realtime/Stream API requests are authenticated with a
+    per-account API key sent in the x-api-key request header (documented as
+    DIGISELF_API_KEY in the sample apps). API access is provisioned on the
+    DigiSelf Business plan. Sample backends also carry an OPENAI_API_KEY for the
+    OpenAI Realtime API leg, which is a separate third-party credential and not
+    part of DigiSelf auth.
+  sources:
+  - https://github.com/embodyme/digiself-realtime-api-sample
+notes:
+- No OpenAPI/Swagger securityScheme is published; this profile is captured from
+  the official digiself-realtime-api-sample repository documentation.
+- No OAuth2/OpenID Connect surface was found; auth is single API key only.
