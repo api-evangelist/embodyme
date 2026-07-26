@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+note: >-
+  Probed the standard /.well-known/ discovery surface plus /llms.txt on the
+  EmbodyMe and DigiSelf hosts. embodyme.com returns hard 404s for these paths.
+  digiself.tech serves an SPA catch-all (HTTP 200 returning the language-select
+  landing page) for arbitrary paths, so a 200 there is NOT a real well-known
+  document. No genuine well-known documents, security.txt, or llms.txt were
+  found. Absence recorded as valid data.
+hosts:
+- host: https://embodyme.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://digiself.tech
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    valid: false
+    reason: SPA catch-all returns landing page, not a security.txt
+  - path: /llms.txt
+    status: 200
+    valid: false
+    reason: SPA catch-all returns landing page, not an llms.txt
+- host: https://api.digiself.tech
+  documents:
+  - path: /api
+    status: 404
+    reason: API root returns 404 (no unauthenticated index/spec)
+documents: []

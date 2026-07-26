@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: https://github.com/embodyme/digiself-realtime-api-sample
+note: >-
+  No official hosted/remote MCP server was found for EmbodyMe/DigiSelf. This is a
+  DERIVED candidate tool list mapped from the documented DigiSelf Realtime API
+  operations, provided as a governance/design starting point (not a published
+  server).
+server:
+  name: digiself
+  transport: http
+  url: null
+tools:
+- name: create_bot
+  description: >-
+    Create a meeting bot that joins a conferencing URL and streams a real-time
+    avatar; returns a job_id.
+  source_operation: POST https://api.digiself.tech/api/bots
+  inputs:
+  - meeting_url
+  - output_url
+  - avatar_id
+- name: wait_for_bot
+  description: >-
+    Long-poll until the bot identified by job_id is ready (up to timeout
+    seconds).
+  source_operation: GET https://api.digiself.tech/api/bots/wait/{job_id}
+  inputs:
+  - job_id
+  - timeout

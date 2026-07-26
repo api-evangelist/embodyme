@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: derived
+source: https://github.com/embodyme/digiself-realtime-api-sample
+note: >-
+  Entity graph derived from the DigiSelf Realtime API request/response shapes
+  documented in the official sample apps (no OpenAPI is published). Fields and
+  relationships reflect only what the samples demonstrate.
+entities:
+- name: Avatar
+  id_field: avatar_id
+  id_type: string
+  description: >-
+    A photorealistic avatar created from a photo in the DigiSelf app and
+    referenced by avatar_id when driving real-time bots/streams.
+- name: Bot
+  id_field: job_id
+  id_type: uuid-v4
+  description: >-
+    An asynchronously-provisioned meeting bot that joins a conferencing room and
+    renders/streams the chosen avatar. Created via POST /bots and readied via
+    GET /bots/wait/{job_id}.
+  fields:
+  - name: meeting_url
+    type: string
+    description: Target conferencing URL the bot joins (e.g. Google Meet).
+  - name: output_url
+    type: string
+    description: Caller-supplied WSS endpoint the bot streams avatar output to.
+  - name: avatar_id
+    type: string
+    description: Reference to the Avatar the bot renders.
+relationships:
+- from: Bot
+  to: Avatar
+  kind: belongs_to
+  via: avatar_id
+render: null

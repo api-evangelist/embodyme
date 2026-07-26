@@ -1,0 +1,60 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/embodyme/digiself-realtime-api-sample
+docs: https://github.com/embodyme/digiself-realtime-api-sample/tree/main/quick-start-meeting-bot
+summary: >-
+  Cross-cutting request/response semantics for the DigiSelf Realtime API,
+  captured from the official sample applications. REST for job orchestration,
+  WebSocket for the real-time avatar media stream.
+authentication:
+  style: api-key-header
+  header: x-api-key
+  ref: authentication/embodyme-authentication.yml
+hosts:
+  rest_api: https://api.digiself.tech/api
+  realtime_api: https://realtime-api.digiself.tech
+  stream_api: wss://stream-api.digiself.tech
+async_jobs:
+  pattern: submit-then-poll
+  description: >-
+    Long-running avatar/bot creation is asynchronous. A create call returns a
+    job_id immediately; the client polls a wait endpoint until the resource is
+    ready.
+  create: POST /bots
+  create_response: '{ "job_id": "uuid-v4-string" }'
+  poll: GET /bots/wait/{job_id}?timeout=120
+  poll_timeout_param: timeout (seconds, long-poll; sample uses 120)
+streaming:
+  transport: websocket
+  description: >-
+    Avatar media is delivered over a secure WebSocket (WSS). The Stream API
+    endpoint (wss://stream-api.digiself.tech) carries the real-time avatar
+    audio/video; a meeting bot can also be told to push output to a caller-
+    supplied output_url WebSocket (e.g. an ngrok tunnel path /ws).
+  output_url_field: output_url
+  audio: 16kHz input upsampled to 24kHz in the sample pipeline
+identifiers:
+  avatar_id: >-
+    Opaque avatar identifier selected/created in the DigiSelf app and passed on
+    API calls (avatar_id) to choose which avatar the bot renders.
+  job_id: uuid-v4 returned by POST /bots and used on the wait endpoint
+idempotency:
+  supported: false
+  note: No idempotency-key header or contract is documented by the provider.
+pagination:
+  supported: unknown
+  note: No list endpoints or pagination are documented in the public samples.
+versioning:
+  scheme: none-documented
+  note: >-
+    REST paths are unversioned under /api; realtime and stream capabilities are
+    split across dedicated subdomains rather than a version segment.
+error_envelope:
+  note: >-
+    No structured error envelope (e.g. RFC 9457 problem+json) is documented in
+    the public samples.
+rate_limits:
+  note: No published rate-limit signaling/headers were found.
+cross_links:
+  authentication: authentication/embodyme-authentication.yml
+  data_model: data-model/embodyme-data-model.yml

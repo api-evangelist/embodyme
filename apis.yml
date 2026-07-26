@@ -1,20 +1,82 @@
 aid: embodyme
 name: EmbodyMe
-description: EmbodyMe is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  EmbodyMe, Inc. is a Tokyo-based AI company building real-time neural rendering
+  and 3D dense face-tracking technology for photorealistic digital humans. Its
+  flagship developer product, DigiSelf, turns a single photo into a lifelike AI
+  avatar that speaks from text or audio in dozens of languages, in both
+  pre-recorded video and sub-second real-time interactive modes. The DigiSelf
+  Realtime API (api.digiself.tech) and Stream API (WebSocket) let developers
+  drive avatars into LiveKit rooms, Google Meet meeting bots, chatbots, live
+  streaming, gaming, and advertising via an x-api-key protected REST + WebSocket
+  surface. EmbodyMe also ships the xpression camera, xpression chat, and
+  xpression avatar consumer apps and a cross-platform Real-time AI Video
+  Generation SDK for iOS, Android, Windows, and Mac. Backed by Techstars, with
+  recognition from NVIDIA, Microsoft, Product Hunt, and SIGGRAPH ASIA.
 url: https://raw.githubusercontent.com/api-evangelist/embodyme/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://digiself.tech/assets/images/logo/logo_text.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - techstars
-x-tier: stub
+x-tier: profiled
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- Avatars
+- Digital Humans
+- Neural Rendering
+- Face Tracking
+- Generative AI
+- Video Generation
+- Real-Time
+- Streaming
+- SDK
+apis:
+- name: DigiSelf Realtime API
+  description: >-
+    REST + WebSocket API for driving real-time photorealistic AI avatars.
+    Create meeting bots that join Google Meet or LiveKit rooms and stream a
+    talking avatar rendered from an avatar_id, wiring audio in and avatar
+    video/audio out over WebSocket. Authenticated with an x-api-key header;
+    API access is available on the DigiSelf Business plan.
+  humanURL: https://digiself.tech/en/
+  baseURL: https://api.digiself.tech/api
+  tags:
+  - Avatars
+  - Real-Time
+  - Video Generation
+  - Streaming
+  - AI
+  properties:
+  - type: Documentation
+    url: https://github.com/embodyme/digiself-realtime-api-sample
+  - type: GettingStarted
+    url: https://github.com/embodyme/digiself-realtime-api-sample/tree/main/quick-start-livekit
+  - type: SourceCode
+    url: https://github.com/embodyme/digiself-realtime-api-sample
+  - type: Authentication
+    url: authentication/embodyme-authentication.yml
+  - type: Conventions
+    url: conventions/embodyme-conventions.yml
+  - type: DataModel
+    url: data-model/embodyme-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +85,38 @@ maintainers:
 common:
 - type: Website
   url: https://company.embodyme.com/
+- type: Portal
+  url: https://digiself.tech/en/
+- type: Documentation
+  url: https://github.com/embodyme/digiself-realtime-api-sample
+- type: GettingStarted
+  url: https://github.com/embodyme/digiself-realtime-api-sample/tree/main/quick-start-livekit
+- type: GitHubOrganization
+  url: https://github.com/embodyme
+- type: SignUp
+  url: https://app.digiself.tech/subscribe-now
+- type: Login
+  url: https://app.digiself.tech/login
+- type: Pricing
+  url: https://digiself.tech/en/
+- type: PrivacyPolicy
+  url: https://embodyme.com/privacy/
+- type: Authentication
+  url: authentication/embodyme-authentication.yml
+- type: Conventions
+  url: conventions/embodyme-conventions.yml
+- type: DataModel
+  url: data-model/embodyme-data-model.yml
+- type: MCPServer
+  url: mcp/embodyme-mcp.yml
+- type: LLMsTxt
+  url: llms/embodyme-llms.txt
+- type: WellKnown
+  url: well-known/embodyme-well-known.yml
+- type: DomainSecurity
+  url: security/embodyme-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
