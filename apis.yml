@@ -63,6 +63,12 @@ apis:
   - Real-Time
   - Video Generation
   - Streaming
+  - Artificial Intelligence
+  tags_raw:
+  - Avatars
+  - Real-Time
+  - Video Generation
+  - Streaming
   - AI
   properties:
   - type: Documentation
