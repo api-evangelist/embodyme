@@ -27,15 +27,16 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  generated: '2026-09-03'
   method: derived
 image: https://digiself.tech/assets/images/logo/logo_text.png
 x-type: company
@@ -124,8 +125,9 @@ common:
   url: conventions/embodyme-conventions.yml
 - type: DataModel
   url: data-model/embodyme-data-model.yml
-- type: MCPServer
+- type: X-MCPServerCandidate
   url: mcp/embodyme-mcp.yml
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
 - type: LLMsTxt
   url: llms/embodyme-llms.txt
 - type: WellKnown
