@@ -1,0 +1,37 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://digiself.tech/en/
+sources:
+- https://digiself.tech/en/
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Marketing homepage with pricing section; monthly/yearly toggle shown but only monthly prices listed.
+  API access only in Business (contact sales) tier.
+plan_count: 3
+currency: USD
+plans:
+- name: Basic
+  price_text: Free / month
+  period: month
+  included_quota: 3-min video generation; 1 custom voice model; 6-min voice generation
+- name: Personal
+  price_text: 59 USD / month
+  price: 59
+  currency: USD
+  period: month
+  included_quota: 1 custom AI avatar/month; 30-min video/month; 2 custom voice model/month; 40-min voice/month;
+    Watermark removal; Non-commercial use only
+- name: Business
+  price_text: Contact Us
+  period: none
+  included_quota: Commercial use; API access; Real-time API access; Team management
