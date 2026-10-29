@@ -64,6 +64,103 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-EmbodyMe is a company surfaced as a portfolio company of techstars and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+EmbodyMe, Inc. is a Tokyo-based AI company building real-time neural rendering and 3D dense face-tracking technology for photorealistic digital humans. Its flagship developer product, DigiSelf, turns a single photo into a lifelike AI avatar that speaks from text or audio in dozens of languages, in both pre-recorded video and sub-second real-time interactive modes. The DigiSelf Realtime API (api.digiself.tech) and Stream API (WebSocket) let developers drive avatars into LiveKit rooms, Google Meet meeting bots, chatbots, live streaming, gaming, and advertising via an x-api-key protected REST + WebSocket surface. EmbodyMe also ships the xpression camera, xpression chat, and xpression avatar consumer apps and a cross-platform Real-time AI Video Generation SDK for iOS, Android, Windows, and Mac. Backed by Techstars, with recognition from NVIDIA, Microsoft, Product Hunt, and SIGGRAPH ASIA.
 
-Backed by: techstars — https://company.embodyme.com/
+**Areas:** Company · Artificial Intelligence · Avatars · Digital Humans · Neural Rendering · Face Tracking · Generative AI · Video Generation · Real-Time · Streaming · SDK
+
+## EmbodyMe on APIs.io
+
+Everything profiled for EmbodyMe is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/embodyme/](https://apis.io/providers/embodyme/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [DigiSelf Realtime API](https://apis.io/apis/embodyme/digiself-realtime-api/) — REST + WebSocket API for driving real-time photorealistic AI avatars. Create meeting bots that join Google Meet or LiveKit rooms and stream a talking avatar…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [digiself](https://apis.io/servers/embodyme/digiself/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Embodyme Authentication](https://apis.io/security/embodyme/embodyme-authentication/)
+- [Embodyme Domain Security](https://apis.io/security/embodyme/embodyme-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Embodyme Plans Pricing](https://apis.io/plans/embodyme/embodyme-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://company.embodyme.com/)
+- [Documentation](https://github.com/embodyme/digiself-realtime-api-sample)
+- [Getting started](https://github.com/embodyme/digiself-realtime-api-sample/tree/main/quick-start-livekit)
+- [Pricing](https://digiself.tech/en/)
+- [Sign up](https://app.digiself.tech/subscribe-now)
+- [Blog](https://company.embodyme.com/press/)
+- [Privacy policy](https://embodyme.com/privacy/)
+- [GitHub](https://github.com/embodyme)
+
+## API Evangelist rating
+
+**Kin Score 28.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 59.2 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.5** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/embodyme/](https://apis.io/providers/embodyme/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for EmbodyMe: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/embodyme/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
